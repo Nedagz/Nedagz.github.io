@@ -1,0 +1,778 @@
+.div-container {
+  background-color: $primary_color;
+  width: 100%;
+  min-height: 100vh;
+  @include row($align-items: center);
+
+  @media screen and (min-width: 990px) {
+    .parent-header {
+      .header {
+        .icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .container-main {
+      .section-container {
+        .text-rapper {
+          h3 {
+            font-size: 1.3vw;
+          }
+          h1 {
+            font-size: 2.5vw;
+          }
+          h2 {
+            font-size: 1.8vw;
+          }
+          .button-link {
+            font-size: 0.7vw;
+          }
+        }
+      }
+    }
+  }
+ 
+  @media screen and (max-width: 990px) {
+    min-height: 110vw;
+    .container-main {
+      .section-container {
+        flex-direction: column;
+        .img-rapper {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+        .text-rapper {
+          width: 100%;
+          text-align: center;
+          & > * {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .container-main {
+      max-width: 60vw;
+      .section-container {
+        .text-rapper {
+          text-align: center;
+          h3 {
+            font-size: 3.7vw;
+            font-weight: 400;
+          }
+          h1 {
+            font-size: 7.4vw;
+          }
+          h2 {
+            font-size: 5vw;
+          }
+
+          .button-link {
+            font-size: 2.2vw;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 990px) {
+    .parent-header {
+      .header {
+        position: relative;
+
+        .logo-link {
+          display: inline-block;
+          margin-bottom: 3vw;
+          padding-top: 1vw;
+          font-size: 2vw;
+        }
+        .icon {
+          display: inline-block;
+          position: absolute;
+          top: 9px;
+          right: 0;
+          font-size: 4.5vw;
+        }
+        display: block;
+        .div-header {
+          display: none;
+          width: 100%;
+          height: 30vw;
+          background-color: $background_color;
+
+          .nav-list {
+            .navigation {
+              display: block;
+
+              & > * {
+                margin-bottom: 3vw;
+                font-size: 2vw;
+              }
+            }
+          }
+          .button {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .parent-header {
+      .header {
+        .logo-link {
+          font-size: 2.3vw;
+        }
+
+        .div-header {
+          .nav-list {
+            .navigation {
+              & > * {
+                font-size: 2.2vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-parent {
+  @include row($justify: center, $align-items: center);
+}
+
+.parent-header {
+  display: none;
+  width: 100%;
+  background-color: $background_color;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  transition: 0.6s;
+  .header {
+    @include max_width_header;
+    @include row($align-items: center);
+
+    .icon {
+      font-size: 5vw;
+      display: block;
+      position: relative;
+    }
+
+    > .logo-link {
+      font-size: 1.4vw;
+      flex-grow: 1;
+      > h1 {
+        color: $primary_color;
+        > span {
+          color: $main_text_color;
+        }
+      }
+    }
+
+    .div-header {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      > .nav-list {
+        margin-right: auto;
+        @include row;
+        > .navigation {
+          list-style-type: none;
+          @include row;
+          gap: $spacer * 4;
+          font-weight: 500;
+          & * {
+            color: $main_text_color;
+          }
+          & *:hover {
+            color: $primary_color;
+          }
+          .active {
+            color: $primary_color;
+          }
+        }
+      }
+
+      > .button {
+        @include button;
+      }
+    }
+  }
+}
+
+.container-main {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .section-container {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    @include row($align-items: center, $justify: center);
+    flex-wrap: wrap;
+    gap: 3vw;
+
+    > .img-rapper {
+      width: 35%;
+      > img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    > .text-rapper {
+      width: 50%;
+      > h3 {
+        font-size: 2vw;
+      }
+      > h1 {
+        font-size: 4vw;
+        color: $primary_color;
+        -webkit-text-stroke: 2px $background_color;
+        font-weight: 900;
+      }
+
+      > h2 {
+        font-weight: 400;
+        font-size: 2vw;
+        padding-bottom: 3vw;
+      }
+
+      > .button-link {
+        @include button(
+          $border_color: $background_color,
+          $hover_background_color: $background_color,
+          $hover_text_color: $main_text_color
+        );
+
+        margin-top: 4vw;
+        color: $background_color;
+      }
+    }
+  }
+}
+
+.title {
+  @include style_headings;
+  @include parent_style_headings;
+
+  @media screen and (min-width: 1600px) {
+    max-width: 1140px;
+    .container-main {
+      .section-container {
+        .text-rapper {
+          h3 {
+            font-size: 1vw;
+          }
+          h1 {
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 770px) {
+    @include style_headings_responsive;
+  }
+}
+
+.section-about {
+  @include parent_width;
+  @include row($justify: space-between, $align-items: center);
+
+  > .div-image {
+    width: 40%;
+    margin-bottom: 1vw;
+    > img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+
+  > .div-text {
+    margin-bottom: 1vw;
+    width: 58%;
+    > * {
+      width: 100%;
+    }
+
+    > h3 {
+      color: $main_text_color;
+      font-size: 2.5vw;
+      font-weight: 700;
+      margin-bottom: 2vw;
+    }
+
+    > p {
+      color: $light_text_color;
+      margin-bottom: 2vw;
+      font-size: 1.3vw;
+    }
+
+    > .text-container {
+      @include row;
+      flex-wrap: wrap;
+
+      > .text-about {
+        @include style_heading_h6;
+      }
+    }
+    > .parent-button-links {
+      display: flex;
+      gap: 2vw;
+
+      > .button-links {
+        @include button(
+          $border_color: $primary_color,
+          $hover_background_color: $primary_color,
+          $hover_text_color: $background_color
+        );
+      }
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+   
+    .div-text {
+      h3 {
+        font-size: 1.2vw;
+        font-weight: 700;
+        margin-bottom: 0.5vw;
+      }
+      p {
+        font-size: 0.8vw;
+        margin-bottom: 0.5vw;
+      }
+      .text-container {
+        .text-about {
+          h6 {
+            font-size: 0.8vw;
+            padding-bottom: 0.5vw;
+          }
+        }
+      }
+      .parent-button-links {
+        .button-links {
+          font-size: 0.8vw;
+          padding: 0.5vw 0.9vw;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1439px) {
+    max-width: 960px;
+  }
+
+  
+  @media screen and (max-width: 990px) {
+    @include column;
+    max-width: 70vw;
+
+    .div-image,
+    .div-text {
+      width: 100%;
+    }
+
+    .div-text {
+      p {
+        font-size: 1.7vw;
+      }
+      .text-container {
+        .text-about {
+          h6 {
+            font-size: 1.7vw;
+          }
+        }
+      }
+
+      .parent-button-links {
+        .button-links {
+          font-size: 1.6vw;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    max-width: 65vw;
+  }
+
+  @media screen and (max-width: 575px) {
+    max-width: 70vw;
+    .div-text {
+      h3 {
+        font-size: 4.5vw;
+      }
+      p {
+        font-size: 2.8vw;
+      }
+      .text-container {
+        flex-direction: column;
+        .text-about {
+          h6 {
+            font-size: 2.8vw;
+          }
+        }
+      }
+      .parent-button-links {
+        .button-links {
+          font-size: 2.5vw;
+          padding: 2vw 2.8vw;
+        }
+      }
+    }
+  }
+}
+
+.container-skills {
+  @include parent_width;
+
+  > .div-skills {
+    width: 100%;
+    @include row($align-items: center, $justify: space-between);
+    flex-wrap: wrap;
+
+    > .skills-rapper {
+      @include style_skills;
+
+      .div-green {
+        width: 90%;
+        background-color: $primary_color;
+      }
+
+      .div-yellow {
+        width: 85%;
+        background-color: $skills_background_color_yellow;
+      }
+
+      .div-red {
+        width: 15%;
+        background-color: $skills_background_color_red;
+      }
+
+      .div-rapper {
+        width: 80%;
+      }
+
+      .div-black {
+        width: 20%;
+        background-color: $main_text_color;
+      }
+
+      .div-blue {
+        width: 20%;
+        background-color: $skills_background_color_blue;
+      }
+    }
+  }
+
+ 
+  @media screen and (max-width: 1439px) {
+    max-width: 960px;
+  }
+
+  @media screen and (max-width: 990px) {
+    max-width: 80vw;
+  }
+
+  @media screen and (max-width: 770px) {
+    max-width: 70vw;
+    .div-skills {
+      flex-direction: column;
+      .skills-rapper {
+        width: 100%;
+        .parent-skills {
+          .heading-h6 {
+            font-size: 2vw;
+          }
+          .div-parent {
+            height: 1.5vw;
+          }
+        }
+      }
+    }
+    
+  }
+  @media screen and (max-width: 575px) {
+    max-width: 70vw;
+    
+    .div-skills {
+      flex-direction: column;
+      .skills-rapper {
+        width: 100%;
+        .parent-skills {
+          .heading-h6 {
+            font-size: 4vw;
+          }
+          .div-parent {
+            height: 3vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Portfolio-main {
+  @include parent_width;
+
+  .parent-button {
+    @include row($align-items: center, $justify: center);
+    flex-wrap: wrap;
+    margin-bottom: 2vw;
+    gap: 1vw;
+    width: 100%;
+  }
+
+  .parent-image {
+    max-width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1.5vw;
+    margin-right: auto;
+    margin-left: auto;
+
+    .images-wrapper {
+      @include style_image;
+    }
+
+    .images-wrapper:hover .overlay {
+      bottom: 0;
+      height: 100%;
+    }
+
+    & * {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  @media screen and (max-width: 1439px) {
+    max-width: 960px;
+  }
+
+  @media screen and (max-width: 990px) {
+    max-width: 80vw;
+    .parent-button {
+      & > * {
+        font-size: 1.5vw;
+        padding-right: 2.8vw;
+        padding-left: 2.8vw;
+      }
+    }
+    .parent-image {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .parent-button {
+      & > * {
+        font-size: 2vw;
+        padding-right: 2.8vw;
+        padding-left: 2.8vw;
+      }
+    }
+    .parent-image {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .parent-button {
+      & > * {
+        font-size: 3.5vw;
+        padding-right: 2.8vw;
+        padding-left: 2.8vw;
+      }
+    }
+  }
+}
+
+.button {
+  @include button;
+  background-color: $background_color;
+}
+
+.container-contact {
+  @include parent_width;
+  margin-bottom: 8vw;
+
+  > .parent-contact {
+    max-width: 50vw;
+    margin-right: auto;
+    margin-left: auto;
+
+    > .div-input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1vw;
+      width: calc(100% - 0.5vw);
+      > .parent-input-name {
+        width: 50%;
+        .input-name {
+          @include form_style;
+          width: 100%;
+        }
+      }
+
+      > .parent-input-email {
+        width: 50%;
+        .input-email {
+          @include form_style;
+          width: 100%;
+        }
+      }
+    }
+
+    > .parent-input-subject {
+      width: 100%;
+      > .input-subject {
+        @include form_style;
+        width: 100%;
+      }
+    }
+
+    > .parent-input-message {
+      width: 100%;
+      align-items: center !important;
+
+      > .input-message {
+        width: 100%;
+        @include form_style;
+        min-height: 10vw;
+        height: auto;
+      }
+    }
+
+    .button-contact {
+      text-align: center;
+      margin-top: 4vw;
+    }
+  }
+
+  @media screen and (max-width: 1439px) {
+    max-width: 960px;
+  }
+  @media screen and (max-width: 990px) {
+    .parent-contact {
+      max-width: 65vw;
+    }
+  }
+
+  @media screen and (max-width: 770px) {
+    .parent-contact {
+      .div-input {
+        .parent-input-name {
+          .input-name {
+            font-size: 1.8vw;
+            padding: 1.5vw 3vw;
+          }
+        }
+
+        .parent-input-email {
+          .input-email {
+            font-size: 1.8vw;
+            padding: 1.5vw 3vw;
+          }
+        }
+      }
+      .parent-input-subject {
+        .input-subject {
+          font-size: 1.8vw;
+          padding: 1.5vw 3vw;
+        }
+      }
+
+      .parent-input-message {
+        .input-message {
+          font-size: 1.8vw;
+          padding: 1.5vw 3vw;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 575px) {
+    .parent-contact {
+      .div-input {
+        flex-direction: column;
+        .parent-input-name,
+        .parent-input-email {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: $primary_color;
+  min-height: 20vw;
+  margin-right: auto;
+  margin-left: auto;
+  @include row($justify: center, $align-items: center);
+  .footer-div {
+    max-width: 25vw;
+    .footer-icon {
+      text-align: center;
+      & > * {
+        color: $background_color;
+        font-size: 2vw;
+        margin-right: $spacer;
+      }
+    }
+    .footer-paragraph {
+      color: $background_color;
+      text-align: center;
+      font-weight: 700;
+      .domain {
+        color: $background_color;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+   .footer-div {
+    max-width: 15vw;
+   } 
+  }
+
+  @media screen and (max-width: 1439px) {
+    
+    .footer-div {
+      max-width: 35vw;
+      .footer-icon {
+        & > * {
+          font-size: 2.5vw;
+        }
+      }
+    }
+    .footer-paragraph {
+      font-size: 1.3vw;
+      .domain {
+
+      }
+    }
+  }
+}

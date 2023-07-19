@@ -1,0 +1,181 @@
+@mixin max_width_header() {
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+@mixin row($justify: flex-start, $align-items: flex-start) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align-items;
+}
+
+@mixin column($justify: flex-start, $align-items: flex-start) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align-items;
+}
+
+@mixin hover_links_header() {
+  &:hover {
+    color: $primary_color;
+  }
+}
+
+@mixin button(
+  $border_color: $primary_color,
+  $hover_background_color: $primary_color,
+  $hover_text_color: $background_color,
+  $text_color: $primary_color
+) {
+  font-size: 1.1vw;
+  border: 1px solid $border_color;
+  border-radius: $spacer * 4;
+  padding: 1.1vw 1.8vw;
+  transition: 0.4s;
+  color: $text_color;
+
+  &:hover {
+    background-color: $hover_background_color;
+    color: $hover_text_color;
+  }
+}
+
+@mixin parent_width() {
+  width: 100%;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@mixin parent_style_headings() {
+  width: 100%;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 3vw;
+  padding-top: 6vw;
+}
+
+@mixin style_headings() {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > h1 {
+    -webkit-text-stroke: 1px $heading_color;
+    font-weight: 900;
+    font-size: 10vw;
+  }
+
+  & > h2 {
+    color: $primary_color;
+    position: absolute;
+    font-weight: 900;
+    font-size: 3vw;
+  }
+}
+
+@mixin style_headings_responsive {
+  h1 {
+    font-size: 14vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+}
+
+@mixin style_heading_h6 {
+  min-width: 50%;
+  color: $main_text_color;
+
+  > h6 {
+    padding-bottom: 2vw;
+    font-weight: 400;
+    font-size: 1.1vw;
+    > span {
+      color: $light_text_color;
+    }
+  }
+}
+
+@mixin style_skills {
+  min-width: 48%;
+  > .parent-skills {
+    margin-bottom: 1vw;
+
+    .heading-h6 {
+      display: flex;
+      justify-content: space-between;
+      font-size: 2vw;
+      font-weight: 700;
+      margin-bottom: 1vw;
+    }
+
+    > .div-parent {
+      height: 1vw;
+      border-radius: 10px;
+      background-color: $bg_light_color;
+      display: flex;
+      overflow: hidden;
+
+      > div {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@mixin style_image {
+  position: relative;
+  display: block;
+
+  > .img {
+    position: relative;
+   
+  }
+  .overlay {
+    background-color: #55e5cdaf;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 0;
+    transition: all 0.5s;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-icon {
+      font-size: 10vw;
+      color: $background_color;
+     }
+    }
+  }
+
+
+@mixin form_style {
+  padding: 1vw 2vw;
+  display: block;
+  font-size: 1vw;
+  font-weight: 400;
+  border-radius: 2vw;
+  border: 1px solid $forms_border_color;
+  margin-bottom: 1vw;
+}
+
+
+@mixin responsive_title {
+  h1 {
+    font-size: 8vw;
+  }
+  h2 {
+    font-size: 2vw;
+  }
+}

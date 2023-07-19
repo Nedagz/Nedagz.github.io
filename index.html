@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="home-section" class="div-container">
+      <div id="myHeader" class="parent-header">
+        <header class="header">
+          <a class="logo-link" href="#">
+            <h1>Free<span>Folio</span></h1>
+          </a>
+
+          <a onclick="myFunction()" class="icon" href="#"
+            ><ion-icon name="menu-outline"></ion-icon
+          ></a>
+
+          <div class="div-header" id="myLinks">
+            <nav class="nav-list">
+              <ul class="navigation">
+                <li><a class="active" href="#home-section">Home</a></li>
+                <li><a href="#about-section">About</a></li>
+                <li><a href="#skill-section">Skill</a></li>
+                <li><a href="#portfolio-section">Portfolio</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+              </ul>
+            </nav>
+
+            <a class="button" href="#">Hire Me</a>
+          </div>
+        </header>
+      </div>
+
+      <div class="container-main">
+        <section class="section-container">
+          <div class="img-rapper">
+            <img src="assets/profile.jpg" />
+          </div>
+
+          <div class="text-rapper">
+            <h3>I'm</h3>
+            <h1>NEDA GOODARZI</h1>
+            <h2>Front-End Developer</h2>
+            <a class="button-link" href="#">Download CV</a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="about-section" class="title">
+      <h1>ABOUT</h1>
+      <h2>ABOUT ME</h2>
+    </div>
+
+    <section class="section-about">
+      <div class="div-image">
+        <img src="assets/about.jpg" />
+      </div>
+
+      <div class="div-text">
+        <h3>Web Developer</h3>
+        <p>
+          Hello I'm Neda Goodarzi a junior Front-end developer. programming was
+          one of my childhood dreams so I started learning Front-end developing
+          in 2023. I'm vary interested in learning in this field and I would be
+          happy to let me know if you have any internship opportunitles. I study
+          computer software engineering at Ayatollah Boroujerdi University.
+        </p>
+
+        <div class="text-container">
+          <div class="text-about">
+            <h6>Birthday: <span>7 January 2002</span></h6>
+          </div>
+
+          <div class="text-about">
+            <h6>Age: <span>21</span></h6>
+          </div>
+
+          <div class="text-about">
+            <h6>Degree: <span>Junior</span></h6>
+          </div>
+
+          <div class="text-about">
+            <h6>Phone: <span>09392628105</span></h6>
+          </div>
+
+          <div class="text-about">
+            <h6>City: <span>Borujerd</span></h6>
+          </div>
+
+          <div class="text-about">
+            <h6>Email: <span>nedagoodarziiii@gmail.com</span></h6>
+          </div>
+
+          <div class="text-about">
+            <h6>Freelance: <span>Available</span></h6>
+          </div>
+        </div>
+        <div class="parent-button-links">
+          <a class="button-links" href="#">Hire Me</a>
+          <a class="button-links" href="#">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skill-section" class="container-skills">
+      <div class="title">
+        <h1>SKILLS</h1>
+        <h2>MY SKILLS</h2>
+      </div>
+
+      <div class="div-skills">
+        <div class="skills-rapper">
+          <div class="parent-skills">
+            <div class="heading-h6">
+              <h6>HTML</h6>
+              <h6>90%</h6>
+            </div>
+            <div class="div-parent">
+              <div class="div-green"></div>
+            </div>
+          </div>
+
+          <div class="parent-skills">
+            <div class="heading-h6">
+              <h6>CSS</h6>
+              <h6>85%</h6>
+            </div>
+            <div class="div-parent">
+              <div class="div-yellow"></div>
+            </div>
+          </div>
+
+          <div class="parent-skills">
+            <div class="heading-h6">
+              <h6>Javascript</h6>
+              <h6>15%</h6>
+            </div>
+            <div class="div-parent">
+              <div class="div-red"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-rapper">
+          <div class="parent-skills">
+            <div class="heading-h6">
+              <h6>SASS</h6>
+              <h6>80%</h6>
+            </div>
+            <div class="div-parent">
+              <div class="div-red div-rapper"></div>
+            </div>
+          </div>
+
+          <div class="parent-skills">
+            <div class="heading-h6">
+              <h6>Bootstrap</h6>
+              <h6>20%</h6>
+            </div>
+            <div class="div-parent">
+              <div class="div-black"></div>
+            </div>
+          </div>
+
+          <div class="parent-skills">
+            <div class="heading-h6">
+              <h6>Git</h6>
+              <h6>20%</h6>
+            </div>
+            <div class="div-parent">
+              <div class="div-blue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio-section" class="Portfolio-main">
+      <div class="title">
+        <h1>GALLERY</h1>
+        <h2>MY PORTFOLIO</h2>
+      </div>
+
+      <div class="parent-button" id="gallery-categories"></div>
+
+      <div class="parent-image" id="parent-image"></div>
+    </section>
+
+    <section id="contact-section" class="container-contact">
+      <div class="title">
+        <h1>CANTACT</h1>
+        <h2>CANTACT ME</h2>
+      </div>
+
+      <form class="parent-contact">
+        <div class="div-input">
+          <div class="parent-input-name">
+            <input class="input-name" type="text" placeholder="Your Name" />
+          </div>
+
+          <div class="parent-input-email">
+            <input class="input-email" type="text" placeholder="Your Email" />
+          </div>
+        </div>
+
+        <div class="parent-input-subject">
+          <input class="input-subject" type="text" placeholder="Subject" />
+        </div>
+
+        <div class="parent-input-message">
+          <input class="input-message" type="text" placeholder="Message" />
+        </div>
+        <div class="button-contact">
+          <a class="button" href="#">Send Message</a>
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-div">
+        <div class="footer-icon">
+          <a href="https://github.com/Nedagz"
+            ><ion-icon name="logo-github"></ion-icon
+          ></a>
+          <a href="https://www.linkedin.com/in/neda-goodarzi-5aa608247"
+            ><ion-icon name="logo-linkedin"></ion-icon
+          ></a>
+          <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        </div>
+        <p class="footer-paragraph">
+          @<a href="#" class="domain">Domain Name</a>. All Rights Reserved.
+          Designed by <a href="#">HTML Codex</a>
+        </p>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="apps.js"></script>
+  </body>
+</html>

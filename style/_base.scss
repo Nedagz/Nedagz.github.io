@@ -1,0 +1,17 @@
+html, body {
+    font-family: $font_family;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: $primary_color;
+}
+
+h1,h2, h3 {
+    color: $background_color;
+}
+
+
+
